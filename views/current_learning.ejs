@@ -20,6 +20,12 @@
           </form>
     </nav>
 
+    <form action="/delete/<%= learnings.learning_id%>" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <input type="hidden" name="learning_id" value="<%= learnings.learning_id %>" />
+        <button>delete</button>
+      </form>
+
 
         <section>
             <% for (const element of learnings.learnarray)  { %>

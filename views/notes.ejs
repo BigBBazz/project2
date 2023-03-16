@@ -23,15 +23,34 @@
   </nav>
 
   <h3><%= notes.learning_name %></h3>
-  <section>
+
+  <div class="popup-box">
+    <div class="popup">
+      <div class="content">
+        <header>
+          <p></p>
+          <i class="uil uil-times"></i>
+        </header>
         <form action="/notes/<%= notes.learning_name %>" method="post">
           <input type="hidden" name="_method" value="put" />
           <input type="hidden" name="user_id" value="<%= notes.user_id %>"/>
           <input type="hidden" name="learning_id" value="<%= notes.learning_id %>"/>
           <input type="hidden" name="learning_name" value="<%= notes.learning_name %>"/>
+          <div class="row title">
+            <label>Title</label>
+            <input type="text" spellcheck="false">
+          </div>
+          <div class="row description">
+            <label>Description</label>
+            <textarea spellcheck="false"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <section>
           <textarea name="text_notes" id="" cols="10" rows="10"></textarea>
-          <button>Add note</button>
-        </form> 
   </section>
 
 <article>
@@ -60,6 +79,8 @@
     <div class="dot" style="--x: 14;"></div>
     <div class="dot" style="--x: 15;"></div>
   </div>
+
+  
 
 </article>
 </body>

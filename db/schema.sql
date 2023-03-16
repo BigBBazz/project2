@@ -21,8 +21,6 @@ CREATE TABLE notes_code (
     user_id INTEGER,
     learning_name TEXT,
     notes TEXT,
-
-    FOREIGN KEY (learning_id) REFERENCES learnings(learning_id) 
 );
 
 

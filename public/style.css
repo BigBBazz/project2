@@ -36,7 +36,7 @@ div{
     display: flex;
     flex-direction:row;
     flex-flow:wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align:justify;
     width:100%;
 }
@@ -49,11 +49,19 @@ form{
     font-family: Arial, Helvetica, sans-serif;
     color: azure;
     width:20%;
+    margin-top: 15px;
 }
 
-button{
-    border-radius: 5px;
-    background-color: azure;
+form button{
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #6A93F8;
 }
 
 .new {

@@ -163,7 +163,20 @@ router.put("/learnings/:user_id", (req, res) => {
  
 })
 
+router.delete("/delete/:learning_id", (req, res) => {
+  const sql = `DELETE FROM learnings WHERE learning_id = ${req.body.learning_id};`
+  db.query(sql, (err, dbRes) => {
 
+    const sqlhome = `SELECT * FROM learnings WHERE user_id = ${req.session.userId};`
+    console.log(sqlhome)
+  
+    db.query(sqlhome, (err, dbRes) => {
+      //console.log(dbRes)
+      const learnings = dbRes.rows
+      res.render("home", {learnings, email: req.session.email })
+    })
+  })
+})
 
 
 module.exports = router;
