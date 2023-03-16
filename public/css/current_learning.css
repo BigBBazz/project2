@@ -1,0 +1,53 @@
+body{
+    background-color: darkslateblue;
+}
+
+.pad{
+    height:300px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trunkWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.trunkWrapper div{
+    background-color:deepskyblue;
+}
+
+.trunk{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+.trunk button{
+    height: 20px;
+    margin-left: 3px;
+}
+
+
+.style1{
+    visibility: collapse;
+    height: 0px;
+    width: 0px;
+}
+
+form{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+}
+
+.mainLearning{
+    font-weight: bolder;
+}

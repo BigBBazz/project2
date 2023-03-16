@@ -1,0 +1,80 @@
+body{
+    background-color: darkslateblue;
+}
+
+header{
+    display: flex;
+    justify-content:center;
+    width:100%;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+.login{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    text-align: left;
+}
+
+.login p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    margin-top: 0px;
+}
+
+div{
+    display: flex;
+    flex-direction:row;
+    flex-flow:wrap;
+    justify-content: space-around;
+    text-align:justify;
+    width:100%;
+}
+
+.current_learnings{
+    height: 100%;
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+    width:20%;
+}
+
+button{
+    border-radius: 5px;
+    background-color: azure;
+}
+
+.new {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(119, 110, 176);
+    
+}
+
+.circle {
+    text-align: center;
+    height:120px;
+    width: 120px;
+    border-radius: 60px;
+    background: linear-gradient(45deg, deeppink, orange);
+}
+
+.circle a {
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+    margin-top: 30px;
+}

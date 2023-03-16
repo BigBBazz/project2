@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h2>Daily Learnings</h2>
+        <div class =login>
+            <p>logged in as <%= currentUser.email %></p>
+            <% if (isLoggedIn()) { %>
+                <form action="/sessions" method="post">
+                  <input type="hidden" name="_method" value="delete" />
+                  <button>logout</button>
+                </form>
+            <% } %>
+        </div>
+    </header>
+    <section class = "new">
+        <div class = "circle"> <a href="/learnings/new">Start new learning</a></div>
+    </section>
+    <section>
+        <h3>Your current learnings</h3> 
+        <div class = "current_learnings">
+
+            <% if (learnings!== null) { %>
+                <% for( let learning of learnings ) { %>
+                    <form action="/learnings/<%= learning.user_id %>/learnID/<%= learning.learning_id %>" method="get">
+                        <input type="hidden"/>
+                        <label for=""><%= learning.learning_name %></label>
+                        <button>Continue</button>
+                    </form>
+                <% } %>
+            <% } %>
+
+        </div>
+    </section>
+    <footer></footer>
+
+
+    
+</body>
+</html>

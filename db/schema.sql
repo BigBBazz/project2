@@ -1,20 +1,29 @@
 CREATE DATABASE learning_app;
 
 CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
+    user_id SERIAL PRIMARY KEY,
     email TEXT,
     password_digest TEXT
 );
 
-CREATE TABLE user_learning (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE learnings (
+    learning_id SERIAL PRIMARY KEY,
     user_id INTEGER,
-    learning, TEXT,
+    learning_name TEXT,
+    learnArray TEXT[],
+    FOREIGN KEY (user_id) REFERENCES users(user_id) 
 );
 
-CREATE TABLE learning (
-    id SERIAL PRIMARY KEY,
+
+CREATE TABLE notes_code (
+    notes_id SERIAL PRIMARY KEY,
+    learning_id INTEGER,
     user_id INTEGER,
+    learning_name TEXT,
+    notes TEXT,
+
+    FOREIGN KEY (learning_id) REFERENCES learnings(learning_id) 
 );
+
 
 

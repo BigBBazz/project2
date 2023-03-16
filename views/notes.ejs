@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/notes.css">
+</head>
+<body>
+    <header>Notes</header>
+    
+  <nav>        
+        <% if (isLoggedIn()) { %>
+        <form action="/sessions" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <button>logout</button>
+        </form><% } %> |
+        <form action="/learnings/<%= notes.user_id %>" method="get">
+            <input type="hidden" />
+            <button>home</button>
+          </form> |
+  </nav>
+
+  <h3><%= notes.learning_name %></h3>
+  <section>
+        <form action="/notes/<%= notes.learning_name %>" method="post">
+          <input type="hidden" name="_method" value="put" />
+          <input type="hidden" name="user_id" value="<%= notes.user_id %>"/>
+          <input type="hidden" name="learning_id" value="<%= notes.learning_id %>"/>
+          <input type="hidden" name="learning_name" value="<%= notes.learning_name %>"/>
+          <textarea name="text_notes" id="" cols="10" rows="10"></textarea>
+          <button>Add note</button>
+        </form> 
+  </section>
+
+<article>
+
+  <h1>f(x) = x - 3</h1>
+  <div class="axis" id="axis_x-3" style="--c: 20; --cx: 5; --cy: 12; --dsize: 6;">
+    <div class="dot" style="--x: -5;"></div>
+    <div class="dot" style="--x: -4;"></div>
+    <div class="dot" style="--x: -3;"></div>
+    <div class="dot" style="--x: -2;"></div>
+    <div class="dot" style="--x: -1;"></div>
+    <div class="dot" style="--x: 0;"></div>
+    <div class="dot" style="--x: 1;"></div>
+    <div class="dot" style="--x: 2;"></div>
+    <div class="dot" style="--x: 3;"></div>
+    <div class="dot" style="--x: 4;"></div>
+    <div class="dot" style="--x: 5;"></div>
+    <div class="dot" style="--x: 6;"></div>
+    <div class="dot" style="--x: 7"></div>
+    <div class="dot" style="--x: 8"></div>
+    <div class="dot" style="--x: 9;"></div>
+    <div class="dot" style="--x: 10;"></div>
+    <div class="dot" style="--x: 11;"></div>
+    <div class="dot" style="--x: 12; --dcolor: red; --dsize: 10;"></div>
+    <div class="dot" style="--x: 13;"></div>
+    <div class="dot" style="--x: 14;"></div>
+    <div class="dot" style="--x: 15;"></div>
+  </div>
+
+</article>
+</body>
+</html>

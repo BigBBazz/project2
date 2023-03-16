@@ -1,0 +1,14 @@
+body{
+    background-color: darkslateblue;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+}
+
+form{
+    color: azure;
+}
