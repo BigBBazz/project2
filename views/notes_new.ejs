@@ -9,31 +9,20 @@
 </head>
 <body>
 
-    <section>
-        <% for (const element of notes.learnarray)  { %>
+    <div class = "wrapper">
+        <h2>New learning</h2>
+        <form action="/notes" method="post">
+            <label for="">Name of learning</label>
+            <input class = "notes" type="text" name="notes" />
+            <button>Add</button>
+        </form>
+    </div>
 
-            <p class = "mainLearning"><%= element %></p>
+    <div class="shape"></div>
 
-                <div class = "trunk">
-                    <form action="/notes/learning_name/edit<%= notes.learning_id%>" method="get">
-                        <input type="hidden" name="user_id" value="<%= notes.user_id%>" />
-                        <input type="hidden" name="learning_id" value="<%= notes.learning_id%>" />
-                        <input type="hidden" name="learning_name" value="<%= element %>" >
-                        <button class = "style1">Current notes</button>
-                    </form>
-                </div>
-
-                <div class = "trunk">
-                    <form action="/notes/learning_name<%= notes.learning_id%>" method="get">
-                        <input type="hidden" name="user_id" value="<%= notes.user_id%>" />
-                        <input type="hidden" name="learning_id" value="<%= notes.learning_id%>" />
-                        <input type="hidden" name="learning_name" value="<%= element %>" >
-                        <button class = "style1">New note</button>
-                    </form>
-                </div>
-
-        <% }%>
-    </section>
+    <div class="land">
+       
+    </div>
     
 </body>
 </html>

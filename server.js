@@ -10,7 +10,7 @@ const viewHelpers = require("./middlewares/view_helpers.js")
 const userController = require('./controllers/user_controller')
 const notesController = require('./controllers/notes_controller')
 
-const port = process.env.PORT || 5555
+const port = process.env.PORT || 3000
 
 app.set("view engine", "ejs")
 

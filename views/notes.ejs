@@ -24,64 +24,35 @@
 
   <h3><%= notes.learning_name %></h3>
 
-  <div class="popup-box">
-    <div class="popup">
-      <div class="content">
-        <header>
-          <p></p>
-          <i class="uil uil-times"></i>
-        </header>
-        <form action="/notes/<%= notes.learning_name %>" method="post">
-          <input type="hidden" name="_method" value="put" />
-          <input type="hidden" name="user_id" value="<%= notes.user_id %>"/>
-          <input type="hidden" name="learning_id" value="<%= notes.learning_id %>"/>
-          <input type="hidden" name="learning_name" value="<%= notes.learning_name %>"/>
-          <div class="row title">
-            <label>Title</label>
-            <input type="text" spellcheck="false">
-          </div>
-          <div class="row description">
-            <label>Description</label>
-            <textarea spellcheck="false"></textarea>
-          </div>
-        </form>
-      </div>
-    </div>
+  <form action="/notes/:<%= notes.note_id %>" method="post">
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name="learning_id" value="<%= notes.learning_id%>" />
+    <input type="hidden" name="learning_name" value="<%= notes.learning_name %>" >
+    <input type="hidden" name="user_id" value="<%= notes.user_id %>" />
+    <input type="hidden" name="notes_id" value="<%= notes.notes_id %>"/>
+    <textarea name="" id="" cols="10" rows="10"></textarea>
+    <button>Add</button>
+    <div class = "current_learnings">
+
+    <% if (notes!== null) { %>
+          <% for( let note of notes ) { %>
+            <form action="/notes/:<%= notes.note_id %>" method="post">
+              <input type="hidden" name="_method" value="put" />
+              <input type="hidden" name="learning_id" value="<%= notes.learning_id%>" />
+              <input type="hidden" name="learning_name" value="<%= notes.learning_name %>" >
+              <input type="hidden" name="user_id" value="<%= notes.user_id %>" />
+              <input type="hidden" name="notes_id" value="<%= notes.notes_id %>"/>
+              <textarea name="" id="" cols="10" rows="10"></textarea>
+              <button>Add</button>
+              <textarea cols="30" rows="10"><%= notes %></textarea>
+
+              </form>
+          <% } %>
+      <% } %>
+
   </div>
-  
-  <section>
-          <textarea name="text_notes" id="" cols="10" rows="10"></textarea>
-  </section>
+</form>
 
-<article>
 
-  <h1>f(x) = x - 3</h1>
-  <div class="axis" id="axis_x-3" style="--c: 20; --cx: 5; --cy: 12; --dsize: 6;">
-    <div class="dot" style="--x: -5;"></div>
-    <div class="dot" style="--x: -4;"></div>
-    <div class="dot" style="--x: -3;"></div>
-    <div class="dot" style="--x: -2;"></div>
-    <div class="dot" style="--x: -1;"></div>
-    <div class="dot" style="--x: 0;"></div>
-    <div class="dot" style="--x: 1;"></div>
-    <div class="dot" style="--x: 2;"></div>
-    <div class="dot" style="--x: 3;"></div>
-    <div class="dot" style="--x: 4;"></div>
-    <div class="dot" style="--x: 5;"></div>
-    <div class="dot" style="--x: 6;"></div>
-    <div class="dot" style="--x: 7"></div>
-    <div class="dot" style="--x: 8"></div>
-    <div class="dot" style="--x: 9;"></div>
-    <div class="dot" style="--x: 10;"></div>
-    <div class="dot" style="--x: 11;"></div>
-    <div class="dot" style="--x: 12; --dcolor: red; --dsize: 10;"></div>
-    <div class="dot" style="--x: 13;"></div>
-    <div class="dot" style="--x: 14;"></div>
-    <div class="dot" style="--x: 15;"></div>
-  </div>
-
-  
-
-</article>
 </body>
 </html>

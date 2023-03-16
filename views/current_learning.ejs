@@ -22,11 +22,12 @@
 
     <form action="/delete/<%= learnings.learning_id%>" method="post">
         <input type="hidden" name="_method" value="delete" />
+        <input type="hidden" name="learning_name" value="<%= learnings.learning_name %>" />
         <input type="hidden" name="learning_id" value="<%= learnings.learning_id %>" />
         <button>delete</button>
       </form>
 
-
+    
         <section>
             <% for (const element of learnings.learnarray)  { %>
     
@@ -64,6 +65,12 @@
                     </div>
                     <div>
                 </div>
+                <form  action="/delete/index<%= learnings.learning_id%>" method="post">
+                    <input type="hidden" name="_method" value="delete" />
+                    <input type="hidden" name="learning_name" value="<%= learnings.learning_name %>" />
+                    <input type="hidden" name="learning_id" value="<%= learnings.learning_id %>" />
+                    <button class = "style1">delete</button>
+                  </form>
             <% }%>
         </section>
     

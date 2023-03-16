@@ -178,5 +178,22 @@ router.delete("/delete/:learning_id", (req, res) => {
   })
 })
 
+router.delete("/delete/index/:learning_id", (req, res) => {
+  const sql = `SELECT ARRAY_REMOVE(learnarray, '${req.body.learning_name}') FROM learnings;`
+  db.query(sql, (err, dbRes) => {
+
+    const sqlhome = `SELECT * FROM learnings WHERE user_id = ${req.session.userId};`
+    console.log(sqlhome)
+  
+    db.query(sqlhome, (err, dbRes) => {
+      //console.log(dbRes)
+      const learnings = dbRes.rows
+      res.render("home", {learnings, email: req.session.email })
+    })
+  })
+})
+
+
+
 
 module.exports = router;
