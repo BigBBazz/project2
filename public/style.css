@@ -74,15 +74,15 @@ form button{
 }
 
 .circle {
-    display: flex;
     text-align: center;
     height:120px;
     width: 120px;
-    border-radius: 60px;
+    border-radius: 50%;
     background: linear-gradient(45deg, deeppink, orange);
 }
 
 .circle a {
+    padding-left: 30px;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: azure;

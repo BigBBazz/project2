@@ -5,6 +5,7 @@ const sessionController = require("./controllers/session_controller.js")
 const learningController = require("./controllers/learning_controller.js")
 const logger = require('./middlewares/logger.js')
 const session = require('express-session')
+const MemoryStore = require("memorystore")(session)
 const setCurrentUser = require('./middlewares/setCurrentUser.js')
 const viewHelpers = require("./middlewares/view_helpers.js")
 const userController = require('./controllers/user_controller')
@@ -23,10 +24,15 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/",  methodOverride)
 
 app.use(session({
-    secret: process.env.SESSION_SECRET || "keyboard cat",
-    resave: false,
-    saveUninitalized: true,
-}))
+    cookie: { maxAge: 8640000},
+    store: new MemoryStore({
+      checkPeriod: 8640000
+    })},
+    {
+      secret: process.env.SESSION_SECRET || "keyboard cat",
+      resave: false,
+      saveUninitalized: true,
+  }))
 
 app.use(setCurrentUser)
 
