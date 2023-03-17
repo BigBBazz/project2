@@ -2,7 +2,7 @@
 
 To view app [click here](https://bigbbazz.github.io/project2/)
 
-To view the wireframe [click here]
+To view the wireframe [click here](https://whimsical.com/project-2-7AfH1Tv1oMxEa7RqRoYHSv)
 
 To view the flow-chart [click here]
 
@@ -23,3 +23,6 @@ Project Managment: Excel, whimsical.com
 **Step 3:** Created wireframe and flow-chart using whimsical.com
 
 **Step 4:** Started coding JS with minimum CSS
+
+**Step 5:** Trouble shoot problems
+

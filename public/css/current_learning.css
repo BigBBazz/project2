@@ -50,4 +50,35 @@ form{
 
 .mainLearning{
     font-weight: bolder;
+    font-size: 30px;
 }
+
+nav button, .navDelete{
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #6A93F8;
+}
+
+#add{
+    border-radius: 4px;
+    background: #6A93F8;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.mainLearning:hover {
+    cursor: grab;
+}
+
+
+  

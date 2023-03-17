@@ -20,7 +20,7 @@ CREATE TABLE notes_code (
     learning_id INTEGER,
     user_id INTEGER,
     learning_name TEXT,
-    notes TEXT,
+    notes TEXT
 );
 
 

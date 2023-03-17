@@ -27,15 +27,17 @@ h3{
 }
 
 .login p{
+
+    padding-top: 30px;
+    width:10%;
     font-family: Arial, Helvetica, sans-serif;
     color: aliceblue;
     margin-top: 0px;
 }
 
 div{
-    display: flex;
-    flex-direction:row;
-    flex-flow:wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     text-align:justify;
     width:100%;
@@ -48,7 +50,6 @@ div{
 form{
     font-family: Arial, Helvetica, sans-serif;
     color: azure;
-    width:20%;
     margin-top: 15px;
 }
 
@@ -73,6 +74,7 @@ form button{
 }
 
 .circle {
+    display: flex;
     text-align: center;
     height:120px;
     width: 120px;

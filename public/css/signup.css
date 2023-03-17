@@ -1,0 +1,44 @@
+
+body{
+    background-color: darkslateblue;
+}
+
+header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bolder;
+}
+
+form{
+    margin-top: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+form button{
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #6A93F8;
+  }
+
+/* form button:hover {
+    animation: 2s infinite alternate slidein;
+  }
+
+@keyframes slidein {
+    from {
+
+    }
+  
+    to {
+        transform: rotateY(180deg);
+    }
+} */

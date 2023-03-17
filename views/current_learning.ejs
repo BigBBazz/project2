@@ -24,7 +24,7 @@
         <input type="hidden" name="_method" value="delete" />
         <input type="hidden" name="learning_name" value="<%= learnings.learning_name %>" />
         <input type="hidden" name="learning_id" value="<%= learnings.learning_id %>" />
-        <button>delete</button>
+        <button class = navDelete>delete</button>
       </form>
 
     
@@ -41,7 +41,7 @@
                             <input type="hidden" name="user_id" value="<%= learnings.user_id %>" />
                             <label for="" name = "new_learning_name">Higher concept</label>
                             <input type="text" name="new_learning_name"/>
-                            <button>Add</button>
+                            <button id = "add">Add</button>
                         </form>
                         <form action="/learnings/:<%= learnings.user_id %>" method="post">
                                 <input type="hidden" name="_method" value="put" />
@@ -51,7 +51,7 @@
                                 <input type="hidden" name="user_id" value="<%= learnings.user_id %>" />
                                 <label for="" name = "new_learning_name">Lower concept</label>
                                 <input type="text" name="new_learning_name"/>
-                                <button>Add</button>
+                                <button id = "add">Add</button>
                         </form>
                     </div>
                     <div class = "trunk">
@@ -59,7 +59,7 @@
                             <input type="hidden" name="user_id" value="<%= learnings.user_id%>" />
                             <input type="hidden" name="learning_id" value="<%= learnings.learning_id%>" />
                             <input type="hidden" name="learning_name" value="<%= element %>" >
-                            <button class = "style1">Develop</button>
+                            <button id = "add" class = "style1">Develop</button>
                         </form>
                         <p class = "mainLearning"><%= element %></p>
                     </div>
